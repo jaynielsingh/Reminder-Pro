@@ -33,6 +33,9 @@
                     <navigationItem key="navigationItem" title="Reminder Pro" id="a8T-ZO-8fG">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="ZTn-Vf-prk">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="2cz-md-6Sq" id="Ima-Iv-VrL"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
