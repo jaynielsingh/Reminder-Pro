@@ -8,6 +8,45 @@
     </dependencies>
     <scenes>
         <!--Reminder Pro-->
+        <scene sceneID="jQl-cG-yOr">
+            <objects>
+                <tableViewController id="DiL-gP-Vmb" customClass="CategoryViewController" customModule="Reminder_Pro" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LZZ-B0-mPx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="iEU-vz-HUt">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iEU-vz-HUt" id="Vrt-tF-xHr">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DiL-gP-Vmb" id="3s2-Ut-fsp"/>
+                            <outlet property="delegate" destination="DiL-gP-Vmb" id="87g-Dj-INu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Reminder Pro" id="PQV-Bi-Phd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Zue-7r-Bxl">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="DiL-gP-Vmb" id="Eh0-gc-hbW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="2cz-md-6Sq" kind="show" identifier="goToItems" id="Swo-7z-07S"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="714-Hc-efp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090" y="131"/>
+        </scene>
+        <!--Items-->
         <scene sceneID="rCx-TP-iPf">
             <objects>
                 <tableViewController id="2cz-md-6Sq" customClass="TodoListViewController" customModule="Reminder_Pro" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,9 +54,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="WVE-8q-aL1">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="2cz-md-6Sq" id="Dvg-ZQ-4R7"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoItemCell" id="Yj3-1g-baV">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yj3-1g-baV" id="LiB-QC-19f">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -30,7 +77,7 @@
                             <outlet property="delegate" destination="2cz-md-6Sq" id="H2L-Yp-Ect"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Reminder Pro" id="a8T-ZO-8fG">
+                    <navigationItem key="navigationItem" title="Items" id="a8T-ZO-8fG">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="ZTn-Vf-prk">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -41,7 +88,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w3U-T2-EAw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1559" y="131"/>
+            <point key="canvasLocation" x="1783" y="131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Co-wh-aTE">
@@ -58,12 +105,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="2cz-md-6Sq" kind="relationship" relationship="rootViewController" id="DGe-dK-RON"/>
+                        <segue destination="DiL-gP-Vmb" kind="relationship" relationship="rootViewController" id="u9e-PU-tet"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nR2-xu-srz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="700" y="131"/>
+            <point key="canvasLocation" x="387" y="131"/>
         </scene>
     </scenes>
     <resources>

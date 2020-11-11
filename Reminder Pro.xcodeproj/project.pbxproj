@@ -11,9 +11,10 @@
 		A52897DD2557BF5A006CDAB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52897DC2557BF5A006CDAB0 /* SceneDelegate.swift */; };
 		A52897DF2557BF5A006CDAB0 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52897DE2557BF5A006CDAB0 /* TodoListViewController.swift */; };
 		A52897E22557BF5A006CDAB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52897E02557BF5A006CDAB0 /* Main.storyboard */; };
-		A52897E52557BF5A006CDAB0 /* Reminder_Pro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A52897E32557BF5A006CDAB0 /* Reminder_Pro.xcdatamodeld */; };
 		A52897E72557BF5B006CDAB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A52897E62557BF5B006CDAB0 /* Assets.xcassets */; };
 		A52897EA2557BF5B006CDAB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52897E82557BF5B006CDAB0 /* LaunchScreen.storyboard */; };
+		A5540E81255B4F5B00430197 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5540E7F255B4F5B00430197 /* DataModel.xcdatamodeld */; };
+		A5540E86255C606C00430197 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5540E85255C606C00430197 /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +23,11 @@
 		A52897DC2557BF5A006CDAB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A52897DE2557BF5A006CDAB0 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		A52897E12557BF5A006CDAB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A52897E42557BF5A006CDAB0 /* Reminder_Pro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Reminder_Pro.xcdatamodel; sourceTree = "<group>"; };
 		A52897E62557BF5B006CDAB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A52897E92557BF5B006CDAB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A52897EB2557BF5B006CDAB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5540E80255B4F5B00430197 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		A5540E85255C606C00430197 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +62,47 @@
 			children = (
 				A52897DA2557BF5A006CDAB0 /* AppDelegate.swift */,
 				A52897DC2557BF5A006CDAB0 /* SceneDelegate.swift */,
-				A52897DE2557BF5A006CDAB0 /* TodoListViewController.swift */,
-				A52897E02557BF5A006CDAB0 /* Main.storyboard */,
-				A52897E62557BF5B006CDAB0 /* Assets.xcassets */,
-				A52897E82557BF5B006CDAB0 /* LaunchScreen.storyboard */,
+				A5540E792559F6EB00430197 /* Controllers */,
+				A5540E772559F6D700430197 /* Data Model */,
+				A5540E7B2559F6FC00430197 /* Views */,
+				A5540E7C2559F72000430197 /* Supporting Files */,
 				A52897EB2557BF5B006CDAB0 /* Info.plist */,
-				A52897E32557BF5A006CDAB0 /* Reminder_Pro.xcdatamodeld */,
 			);
 			path = "Reminder Pro";
+			sourceTree = "<group>";
+		};
+		A5540E772559F6D700430197 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				A5540E7F255B4F5B00430197 /* DataModel.xcdatamodeld */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		A5540E792559F6EB00430197 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A5540E85255C606C00430197 /* CategoryViewController.swift */,
+				A52897DE2557BF5A006CDAB0 /* TodoListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A5540E7B2559F6FC00430197 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A52897E02557BF5A006CDAB0 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A5540E7C2559F72000430197 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A52897E62557BF5B006CDAB0 /* Assets.xcassets */,
+				A52897E82557BF5B006CDAB0 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,10 +175,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5540E86255C606C00430197 /* CategoryViewController.swift in Sources */,
+				A5540E81255B4F5B00430197 /* DataModel.xcdatamodeld in Sources */,
 				A52897DF2557BF5A006CDAB0 /* TodoListViewController.swift in Sources */,
 				A52897DB2557BF5A006CDAB0 /* AppDelegate.swift in Sources */,
 				A52897DD2557BF5A006CDAB0 /* SceneDelegate.swift in Sources */,
-				A52897E52557BF5A006CDAB0 /* Reminder_Pro.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,13 +381,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A52897E32557BF5A006CDAB0 /* Reminder_Pro.xcdatamodeld */ = {
+		A5540E7F255B4F5B00430197 /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A52897E42557BF5A006CDAB0 /* Reminder_Pro.xcdatamodel */,
+				A5540E80255B4F5B00430197 /* DataModel.xcdatamodel */,
 			);
-			currentVersion = A52897E42557BF5A006CDAB0 /* Reminder_Pro.xcdatamodel */;
-			path = Reminder_Pro.xcdatamodeld;
+			currentVersion = A5540E80255B4F5B00430197 /* DataModel.xcdatamodel */;
+			name = DataModel.xcdatamodeld;
+			path = ../../DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
